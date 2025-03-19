@@ -131,3 +131,25 @@ ul li {
   -ms-transition: 0.2s ease-in-out all;
   -o-transition: 0.2s ease-in-out all;
 }
+
+@media (max-width: 600px) and (min-width: 250px) {
+  li:hover {
+    opacity: 1;
+    animation: shake 0.3s ease-in-out;
+    -webkit-animation: shake 0.3s ease-in-out;
+  }
+}
+
+@keyframes shake {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
