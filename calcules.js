@@ -115,7 +115,11 @@ equal.onclick = function () {
   try {
     let result = display.value;
     let res = new Function("return " + result);
-    display.value = res();
+    if (res() == "Infinity") {
+      display.value = "Error";
+    } else {
+      display.value = res();
+    }
   } catch (err) {
     display.value = "Error: Invalid Input!";
   }
